@@ -1,0 +1,118 @@
+.profile {
+    margin-top: 30px;
+    @include breakpoint($bp-1020) {
+        padding: 0 10px;
+    }
+    &__banner {
+        background: url(../images/banner-profile-bg.jpg) no-repeat;
+        background-size: cover;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        min-height: 150px;
+        box-shadow: 0 1px 3px rgba($color: #000000, $alpha: 0.53);
+        margin-bottom: 40px;
+        position: relative;
+        padding: 30px 0;
+        @include breakpoint($bp-750) {
+            flex-direction: column;
+        }
+        &::before {
+            content: "";
+            display: block;
+            border-style: solid;
+            border-image-source: url(../images/banner-frame.png);
+            border-image-slice: 15;
+            border-image-width: 15px;
+            border-image-repeat: round;
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            right: 8px;
+            bottom: 8px;
+            pointer-events: none;
+
+        }
+        &-content {
+            -webkit-box-flex: 1;
+            flex: 1 1 auto;
+            text-align: left;
+            padding-left: 180px;
+            position: relative;
+            &::before {
+                background: url(../images/banner-profile-icon.png) no-repeat;
+                width: 220px;
+                height: 167px;
+                display: block;
+                top: -56px;
+                left: -20px;
+                content: "";
+                position: absolute;
+                pointer-events: none;
+                @include breakpoint($bp-1020) {
+                    display: none;
+                }
+            }
+            @include breakpoint($bp-1020) {
+                padding-left: 30px;
+            }
+            @include breakpoint($bp-750) {
+                padding-left: 0;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
+        &-title {
+            font-family: 'GWENT';
+            color: #26eb9f;
+            margin: 0;
+            text-align: inherit;
+            font-size: 36px;
+            line-height: 50px;
+            text-shadow: 0 2px 6px rgba($color: #000000, $alpha: 0.94);
+            font-weight: 700;
+            @include breakpoint($bp-600) {
+                font-size: 28px;
+                line-height: 40px;
+            }
+            @include breakpoint($bp-400) {
+                font-size: 22px;
+                line-height: 30px;
+            }
+        }
+        &-subtitle {
+            color: #d9d8cb;
+            font-size: 16px;
+            line-height: 1.5em;
+            @include breakpoint($bp-600) {
+                font-size: 14px;
+            }
+            @include breakpoint($bp-400) {
+                font-size: 12px;
+                line-height: 15px;
+            }
+        }
+        &-link {
+            background: url(../images/banner-profile-button.png) no-repeat;
+            width: 162px;
+            height: 48px;
+            color: #000;
+            font-family: 'GWENT';
+            font-size: 18px;
+            text-transform: uppercase;
+            text-align: center;
+            -webkit-box-flex: 0;
+            flex: 0 0 auto;
+            margin-left: 30px;
+            margin-right: 70px;
+            position: relative;
+            padding-top: 12px;
+            box-sizing: border-box;
+            text-decoration: none;
+            @include breakpoint($bp-1020) {
+                margin-left: 10px;
+                margin-right: 20px;
+            }
+        }
+    }
+}

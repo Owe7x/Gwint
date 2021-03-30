@@ -1,0 +1,226 @@
+.footer {
+    background-image: url(../images/bg-footer-black-1920.jpg);
+    padding: 40px 0 40px;
+    position: relative;
+    color: #6f6f6f;
+    font-size: 14px;
+    line-height: 2;
+    text-align: center;
+    text-shadow: 0.342px 0.94px 2px rgba($color: #000000, $alpha: 0);
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        background: url(../images/line-footer-gold.png) repeat-x center top;
+        height: 9px;
+        width: 100%;
+    }
+    &__connected {
+        margin-bottom: 10px;
+        background: 0 0!important;
+    }
+}
+.ic1 {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    background-image: url(../images/sprite1-7fd282a730.png);
+    &::after {
+        background-image: url(../images/sprite1-7fd282a730.png);
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        opacity: 0;
+        -webkit-transition: opacity .5s ease-in-out;
+        transition: opacity .5s ease-in-out;
+    }
+}
+.icon-footer-yt {
+    background-position: -429px -286px;
+    width: 141px;
+    height: 141px;
+    &::after {
+        background-position: -429px -143px;
+        width: 141px;
+        height: 141px;
+    }
+}
+.icon-footer-fb {
+    background-position: -143px -143px;
+    width: 141px;
+    height: 141px;
+    &::after {
+        background-position: 0 -143px;
+        width: 141px;
+        height: 141px;
+    }
+}
+.icon-footer-twitter {
+    background-position: -143px -286px;
+    width: 141px;
+    height: 141px;
+    &::after {
+        background-position: 0 -286px;
+        width: 141px;
+        height: 141px;
+    }
+}
+.icon-footer-vk {
+    background-position: -429px 0;
+    width: 141px;
+    height: 141px;
+    &::after {
+        background-position: -286px -286px;
+        width: 141px;
+        height: 141px;
+    }
+}
+.icon-footer-discord {
+    background-position: -143px 0;
+    width: 141px;
+    height: 141px;
+    &::after {
+        background-position: 0 0;
+        width: 141px;
+        height: 141px;
+    }
+}
+.footer__connected .title {
+    margin-bottom: 40px;
+}
+.footer__nav {
+    position: relative;
+    background: 0 0!important;
+    padding-top: 80px;
+    margin-bottom: 16px;
+    text-align: center;
+    &::before {
+        position: absolute;
+        display: block;
+        top: 0;
+        content: "";
+        background: url(../images/divider-black.png) no-repeat center top;
+        height: 17px;
+        width: 100%;
+    }
+    ul {
+        padding: 10px 0;
+        z-index: 1;
+        list-style: none;
+        margin: 0;
+    }
+    li {
+        display: inline-block;
+        margin-right: 15px;
+    }
+}
+.ratings li {
+    height: 100px;
+    vertical-align: middle;
+}
+.rating {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    background-image: url(../images/sprite1-7fd282a730.png);
+}
+.rating-russian {
+    background-position: -68px -535px;
+    width: 64px;
+    height: 70px;
+}
+.rh {
+    height: 56px;
+    margin-top: 0;
+    margin-left: 4px;
+}
+.footer .ratings li .pegi {
+    margin-top: 0;
+}
+.ratings li .rating-esrb {
+    margin-top: -13px;
+}
+.rating-esrb {
+    background-position: 0 -429px;
+    width: 160px;
+    height: 104px;
+}
+.rating-australia {
+    background-position: -162px -429px;
+    width: 164px;
+    height: 53px;
+}
+.rating-australia {
+    margin-top: 0;
+}
+.footer__nav li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.ics.flag-ru {
+    background-position: -163px -571px;
+    width: 27px;
+    height: 19px;
+}
+
+
+.menu.vertical>li {
+    display: block;
+}
+.footer a {
+    color: #00c389;
+    text-decoration: none;
+    &:hover {
+        color: #009b6c;
+    }
+}
+.footer__nav .nav {
+    display: flex;
+    justify-content: center;
+    @include breakpoint($bp-650) {
+        flex-direction: column;
+    }
+}
+.footer p {
+    color: #5f6264;
+    margin-bottom: 1rem;
+    font-size: 16px;
+    line-height: normal;
+    text-align: center;
+    text-shadow: 0.342px 0.94px 2px rgba($color: #000000, $alpha: 0.0);
+    @include breakpoint($bp-650) {
+        font-size: 14px;
+    }
+}
+.footer__logos {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-top: 16px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.footer .logo-gog {
+    height: 45px;
+    margin-top: 15px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.footer .logo-cdpred {
+    height: 102px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.footer__trademark {
+    max-width: 800px;
+    margin: auto;
+}

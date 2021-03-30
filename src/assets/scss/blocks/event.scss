@@ -1,0 +1,132 @@
+.event {
+    margin-top: 50px;
+    &__container {
+        background: rgba(0,0,0,.3) url(../images/upcoming-events-timeline.png) repeat-y 50px 50px;
+        height: 100%;
+        box-sizing: border-box;
+        box-shadow: 0 4px 6px rgba($color: #000000, $alpha: 0.5);
+        position: relative;
+        padding-top: 40px;
+        padding-bottom: 30px;
+        max-width: 895px;
+        margin: 0 auto;
+        @include breakpoint($bp-450) {
+            background: rgba(0,0,0,.3) url(../images/upcoming-events-timeline.png) repeat-y 20px 50px;
+        }
+        @include breakpoint($bp-400) {
+            background: rgba(0,0,0,.3) url(../images/upcoming-events-timeline.png) repeat-y 10px 50px;
+
+        }
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-width: 24px;
+            border-style: solid;
+            border-image-source: url(../images/frame-2.png);
+            border-image-slice: 24;
+            border-image-outset: 0;
+            border-image-repeat: round;
+            pointer-events: none;
+        }
+    }
+}
+.events-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-left: 152px;
+    padding-right: 50px;
+    margin-bottom: 20px;
+    li {
+        border-bottom: 1px solid rgba(61,54,41,.5);
+        a {
+            text-decoration: none;
+        }
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+    @include breakpoint($bp-450) {
+        padding-left: 100px;
+    }
+    @include breakpoint($bp-400) {
+        padding-left: 80px;
+    }
+}
+.event-quality {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    padding: 5px 0;
+    &__date {
+        background: url(../images/upcoming-event-date.png) no-repeat;
+        width: 94px;
+        height: 94px;
+        display: block;
+        position: absolute;
+        left: -110px;
+        top: 0;
+        text-align: center;
+        color: #fff;
+        padding-top: 22px;
+        box-sizing: border-box;
+        @include breakpoint($bp-450) {
+            left: -88px;
+        }
+        @include breakpoint($bp-400) {
+            left: -78px;
+        }
+        strong {
+            display: block;
+            font-family: 'GWENT',sans-serif;
+            font-size: 26px;
+            line-height: 22px;
+        }
+        span {
+            display: block;
+            font-size: 16px;
+            line-height: 22px;
+            text-transform: uppercase;
+        }
+    }
+    &__images {
+        width: 100px;
+        max-height: 96px;
+        display: block;
+        -webkit-box-flex: 0;
+        flex: 0 0 auto;
+        margin: 5px 10px;
+        text-align: center;
+        img {
+            max-width: 100%;
+            max-height: 96px;
+        }
+        @include breakpoint($bp-450) {
+            margin: 0;
+        }
+    }
+    &__content {
+        -webkit-box-flex: 1;
+        flex: 1 1 auto;
+        display: flex;
+    }
+    &__title {
+        color: #fff;
+        font-family: 'GWENT',sans-serif;
+        font-size: 26px;
+        text-transform: uppercase;
+        -webkit-box-flex: 1;
+        flex: 1 1 auto;
+    }
+    &__subtitle {
+        color: #fff;
+        font-size: 22px;
+        display: none;
+    }
+}

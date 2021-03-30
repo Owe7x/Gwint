@@ -1,0 +1,96 @@
+.modal-burger {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+    padding: 20px;
+    &__img {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        img {
+            max-width: 448px;
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.burger {
+    &__link {
+        font-size: 20px;
+        font-family: 'GWENT';
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        position: relative;
+        color: #a17b34;
+        background-image: -webkit-gradient(linear,left top,right top,from(#fadf7a),to(#e2a73e));
+        background-image: -webkit-linear-gradient(left,#fadf7a,#e2a73e);
+        background-image: linear-gradient(to right,#fadf7a,#e2a73e);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: none;
+        &::after {
+            position: absolute;
+            bottom: -7px;
+            content: '';
+            background: -webkit-gradient(linear,left top,right top,from(transparent),color-stop(20%,#38342b),color-stop(80%,#38342b),to(transparent));
+            background: -webkit-linear-gradient(left,transparent,#38342b 20%,#38342b 80%,transparent);
+            background: linear-gradient(to right,transparent,#38342b 20%,#38342b 80%,transparent);
+            width: 100%;
+            height: 1px;
+            display: block;
+        }
+    }
+}
+.mobile-bar-one {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 32px;
+    height: 4px;
+    margin-bottom: 8px;
+    background-image: linear-gradient(to right,#fadf7a,#e2a73e);
+    display: block;
+    filter: drop-shadow(0 1px 2px #000);
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+}
+.mobile-bar-two {
+    opacity: 0;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    width: 32px;
+    height: 4px;
+    margin-bottom: 8px;
+    background-image: linear-gradient(to right,#fadf7a,#e2a73e);
+    display: block;
+    filter: drop-shadow(0 1px 2px #000);
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+.mobile-bar-three {
+    -webkit-transform: rotate(-45deg); 
+    filter: none;
+    transform-origin: left top;
+    margin-bottom: 0;
+    width: 32px;
+    height: 4px;
+    background-image: linear-gradient(to right,#fadf7a,#e2a73e);
+    display: block;
+    transition: all .5s;
+}
+.modal-active {
+    display: block;
+}
+.hamburger-active {
+    display: block;
+}
+.modal-not-active {
+    display: none;
+}

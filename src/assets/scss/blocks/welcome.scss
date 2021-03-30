@@ -1,0 +1,211 @@
+.welcome {
+    background-image: url(../images/bg-welcome.jpg);
+    text-align: center;
+    min-height: 752px;
+    padding-top: 90px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 52px;
+        left: 0;
+        height: 400px;
+        width: 100%;
+        background-image: linear-gradient(to bottom,transparent 0,#040404 100%);
+        transform: translateY(-100%);
+    }
+    &__container {
+        &-logo {
+            margin-bottom: 27px;
+            display: inline-block;
+            img {
+                @include breakpoint($bp-500) {
+                    width: 100%;
+                }
+            }
+        }
+        &__text {
+            font-family: 'GWENT',sans-serif;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: -8px;
+            span {
+                color: #bf9437;
+                display: block;
+                position: relative;
+                text-shadow: 0 2px 15px rgba($color: #000000, $alpha: 0.77);
+                &::after {
+                    content: attr(data-text);
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    margin: auto;
+                    display: block;
+                    background-image: linear-gradient(to right,#bf9437,#e7c567);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    text-shadow: none;
+                }
+            }
+        }
+        &__c1 {
+            font-size: 40px;
+            @include breakpoint($bp-650) {
+                font-size: 30px;
+            }
+        }
+        &__c2 {
+            font-size: 33px;
+            margin-top: -10px;
+            @include breakpoint($bp-650) {
+                font-size: 22px;
+                margin-top: 0px;
+            }
+        }
+        &-play {
+            position: relative;
+            display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            align-items: center;
+            margin: 0 auto;
+            width: 400px;
+            height: 128px;
+            text-decoration: none;
+            @include breakpoint($bp-450) {
+                width: 272px;
+                height: 80px;
+            }
+            &::before {
+                background: url(../images/button-gold-big-idle.png) no-repeat;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                content: '';
+                width: 400px;
+                height: 128px;
+                @include breakpoint($bp-450) {
+                    background: url(../images/button-gold-medium-idle.png) no-repeat;
+                    width: 272px;
+                    height: 80px;
+                }
+
+            }
+            span {
+                color: #1b160a;
+                font-weight: 700;
+                text-transform: uppercase;
+                text-align: center;
+                text-shadow: 0 1px 0 #f9d98f;
+                z-index: 1;
+                font-size: 24px;
+                max-width: 270px;
+                line-height: 21px;
+                @include breakpoint($bp-450) {
+                    font-size: 16px;
+                    line-height: 16px;
+
+                }
+            }
+        }
+    }
+}
+.play-also {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    @include breakpoint($bp-600) {
+        flex-direction: column;
+    }
+    &__ingame {
+        -webkit-box-flex: 1;
+        flex: 1 1 100%;
+        margin-bottom: .5em;
+        text-align: center;
+        background-image: linear-gradient(5deg,#ffec88,#e2a63d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: none;
+        color: #fec100;
+        font-size: 20px;
+        @include breakpoint($bp-750) {
+            font-size: 18px;
+        }
+        @include breakpoint($bp-650) {
+            font-size: 16px;
+        }
+    }
+    &__text {
+        font-size: 20px;
+        margin-bottom: 0;
+        margin-right: 16px;
+        color: #fec100;
+        background-image: linear-gradient(5deg,#ffec88,#e2a63d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: none;
+        @include breakpoint($bp-750) {
+            font-size: 18px;
+        }
+        @include breakpoint($bp-650) {
+            font-size: 16px;
+        }
+        @include breakpoint($bp-600) {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+    }
+}
+.google-play-btn {
+    width: 152px;
+    min-width: 152px;
+    max-width: 152px;
+    height: 40px;
+    position: relative;
+    margin-right: 10px;
+    display: inline-block;
+    img {
+        max-width: 100%;
+        position: absolute;
+        top: 50%;
+        margin-top: -30px;
+        left: 0;
+    }
+    @include breakpoint($bp-650) {
+        margin-right: 0;
+    }
+    @include breakpoint($bp-600) {
+
+        margin-bottom: 10px;
+    }
+}
+.steam-btn {
+    margin-left: 18px;
+    width: 100px;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    img {
+        display: inline-block;
+        max-width: 100%;
+        height: auto;
+    }
+    @include breakpoint($bp-650) {
+        margin-left: 0;
+    }
+    @include breakpoint($bp-600) {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}

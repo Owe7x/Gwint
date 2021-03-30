@@ -1,0 +1,64 @@
+.friends {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    @include breakpoint($bp-1228) {
+        padding: 0 10px;
+    }
+    &__inner {
+        &-all {
+            display: flex;
+            justify-content: flex-end;
+            a {
+                color: #e3b957;
+                font-size: 18px;
+                line-height: normal;
+                text-decoration: none;
+            }
+        }
+        &-content {
+            margin-top: 30px;
+            background-image: url('../images/banner.jpg');
+            background-position: center top;
+            background-size: cover;
+            display: flex;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            flex-flow: row wrap;
+            padding: 20px 0;
+            position: relative;
+            &::before {
+                content: "";
+                display: block;
+                border-style: solid;
+                border-image-source: url('../images/banner-frame.png');
+                border-image-slice: 15;
+                border-image-width: 15px;
+                border-image-repeat: round;
+                position: absolute;
+                top: 8px;
+                left: 8px;
+                right: 8px;
+                bottom: 8px;
+                pointer-events: none;
+            }
+        }
+        &-img {
+            -webkit-box-flex: 1;
+            flex: 1 0 auto;
+            padding-left: 2vw;
+            img {
+                @include breakpoint($bp-400) {
+                   width: 270px;
+                }
+            }
+        }
+        &-btn {
+            padding-right: 1vw;
+            text-align: center;
+        }
+    }
+}

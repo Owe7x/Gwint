@@ -1,0 +1,118 @@
+.master {
+    margin-top: 130px;
+    position: relative;
+    z-index: 1;
+    &__container {
+        background: rgba(0,0,0,.3);
+        position: relative;
+        padding: 40px;
+        margin-top: 130px;
+        box-shadow: 0 4px 6px rgba($color: #000000, $alpha: 0.5);
+        @include breakpoint($bp-650) {
+            padding: 5px;
+        }
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-width: 24px;
+            border-style: solid;
+            border-image-source: url(../images/frame-2.png);
+            border-image-slice: 24;
+            border-image-outset: 0;
+            border-image-repeat: round;
+            pointer-events: none;
+        }
+        &-content {
+            position: relative;
+            margin-bottom: -80px;
+            text-align: center;
+            margin-top: -130px;
+            z-index: 1;
+            img {
+                display: block;
+                max-width: 100%;
+                margin: 0 auto -10px;
+            }
+            p {
+                font-size: 22px;
+                text-align: center;
+                margin: 0 auto 20px;
+                @include breakpoint($bp-600) {
+                    font-size: 18px;
+                }
+                @include breakpoint($bp-400) {
+                    font-size: 16px;
+                    line-height: 18px;
+                }
+            }
+            a {
+                background: url(../images/banner-profile-button.png) no-repeat;
+                width: 162px;
+                height: 48px;
+                color: #000;
+                display: block;
+                margin: 0 auto;
+                font-family: 'GWENT',sans-serif;
+                font-size: 18px;
+                text-transform: uppercase;
+                text-align: center;
+                position: relative;
+                padding-top: 12px;
+                box-sizing: border-box;
+                text-decoration: none;
+            }
+            @include breakpoint($bp-650) {
+                margin-bottom: 15px;
+            }
+        }
+        &-gallery {
+            background: url(../images/fx.png) no-repeat top center;
+            padding-top: 140px;
+            @include breakpoint($bp-650) {
+                display: none;
+            }
+            img {
+                max-width: 100%;
+                display: block;
+                padding: 1px;
+                height: auto;
+            }
+            div {
+                display: flex;
+                -webkit-box-pack: justify;
+                justify-content: space-between;
+                &:first-child {
+                    margin-bottom: 6px;
+                    img {
+                        background: linear-gradient(to bottom,#76131f,#0a478e);
+                    }
+                    a {
+                        -webkit-box-flex: 0;
+                        flex: 0 0 calc(36.3% - 5px);
+                        &:first-child {
+                            -webkit-box-flex: 0;
+                            flex: 0 0 calc(64% - 5px);
+                            img {
+                                background: linear-gradient(to right,#0a478e,#76131f);
+                            }
+                        }
+                    }
+                }
+                &:last-child {
+                    img {
+                        background: linear-gradient(to bottom,#0a478e,#76131f);
+                    }
+                    a {
+                        -webkit-box-flex: 0;
+                        flex: 0 0 calc(25% - 5px);
+                    }
+                }
+            }
+        }
+    }
+}
